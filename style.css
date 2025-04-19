@@ -1,0 +1,239 @@
+*{
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+body {
+font-family: Arial, sans-serif;
+background-color: #f4f6f8;
+margin: 0;
+padding: 20px;
+}
+
+h1 {
+text-align: left;
+margin-bottom: 20px;
+}
+
+.container {
+display: flex;
+justify-content: space-between;
+align-items: center;
+max-width: 1200px;
+margin: 0 auto 20px;
+padding: 0 20px;
+}
+
+#add-user-btn {
+background-color: #28a745;
+color: white;
+border: none;
+padding: 10px 15px;
+border-radius: 5px;
+cursor: pointer;
+font-size: 16px;
+transition: background-color 0.3s ease;
+}
+
+#add-user-btn:hover {
+background-color: #218838;
+}
+
+#user-list {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+gap: 15px;
+max-width: 1200px;
+margin: 0 auto;
+padding: 0 20px;
+}
+
+.user-card {
+background-color: #fff;
+border-radius: 8px;
+padding: 15px;
+box-shadow: 0 2px 4px #0000001a;
+transition: transform 0.2s ease-in-out;
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+}
+
+.user-card:hover {
+transform: translateY(-3px);
+}
+
+.user-card img {
+width: 60px;
+height: 60px;
+border-radius: 50%;
+object-fit: cover;
+margin-bottom: 10px;
+}
+
+.user-card h2 {
+margin-top: 0;
+font-size: 18px;
+margin-bottom: 5px;
+}
+
+.user-card p {
+margin: 3px 0;
+font-size: 14px;
+color: #555;
+}
+
+.user-card strong {
+color: #333;
+}
+
+.user-card button {
+background-color: #007bff;
+color: white;
+border: none;
+padding: 8px 12px;
+border-radius: 5px;
+cursor: pointer;
+font-size: 14px;
+margin-right: 5px;
+transition: background-color 0.3s ease;
+}
+
+.user-card button:last-child {
+background-color: #dc3545;
+}
+
+.user-card button:hover {
+opacity: 0.9;
+}
+
+/* Add User Section Styles */
+.add-user-section {
+background-color: #fff;
+border-radius: 8px;
+padding: 15px;
+box-shadow: 0 2px 4px #0000001a;
+margin-bottom: 20px;
+max-width: 1200px;
+margin-left: auto;
+margin-right: auto;
+}
+
+.add-user-section h3 {
+margin-top: 0;
+margin-bottom: 15px;
+font-size: 16px;
+}
+
+.add-user-form {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+gap: 10px;
+}
+
+.add-user-form input {
+width: 100%;
+padding: 8px;
+border: 1px solid #ccc;
+border-radius: 4px;
+box-sizing: border-box;
+font-size: 14px;
+}
+
+.add-user-form button {
+background-color: #28a745;
+color: white;
+border: none;
+padding: 8px 12px;
+border-radius: 5px;
+cursor: pointer;
+font-size: 14px;
+transition: background-color 0.3s ease;
+grid-column: 1 / -1;
+max-width: 150px;
+}
+
+.add-user-form button:hover {
+background-color: #218838;
+}
+
+.hidden {
+display: none !important;
+}
+
+/* Modal Styles */
+.modal {
+display: none;
+position: fixed;
+z-index: 1;
+left: 0;
+top: 0;
+width: 100%;
+height: 100%;
+overflow: auto;
+background-color: rgba(0,0,0,0.4);
+}
+
+.modal > div {
+background-color: #fefefe;
+margin: 15% auto;
+padding: 20px;
+border: 1px solid #888;
+width: 80%;
+border-radius: 8px;
+position: relative;
+}
+
+.modal h2 {
+text-align: center;
+margin-bottom: 15px;
+}
+
+.modal label {
+display: block;
+margin-bottom: 5px;
+font-weight: bold;
+}
+
+.modal input[type=text],
+.modal input[type=email] {
+width: calc(100% - 12px);
+padding: 8px;
+margin-bottom: 10px;
+border: 1px solid #ccc;
+border-radius: 4px;
+box-sizing: border-box;
+font-size: 16px;
+}
+
+.modal > div > form > div {
+margin-bottom: 15px;
+}
+
+.modal button {
+padding: 10px 15px;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+font-size: 16px;
+transition: background-color 0.3s ease;
+}
+
+.modal #cancel-edit {
+background-color: #6c757d;
+color: white;
+margin-right: 10px;
+}
+
+.modal #cancel-edit:hover {
+background-color: #5a6268;
+}
+
+.modal form button[type="submit"] {
+background-color: #007bff; 
+color: white;
+}
+
+.modal form button[type="submit"]:hover {
+background-color: #0056b3;
+}
