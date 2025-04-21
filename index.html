@@ -1,58 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>My Web Page</title>
-    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danh Sách Người Dùng</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
+    <div class="header">
         <h1>Danh Sách Người Dùng</h1>
         <button id="add-user-btn">Thêm Mới</button>
     </div>
-    
-    <div id="add-user-section" class="add-user-section hidden">
-        <h3>Thêm Người Dùng Mới</h3>
-        <form id="add-form" class="add-user-form">
-            <input id="add-name" type="text" placeholder="Tên" required />
-            <input id="add-email" type="email" placeholder="Email" required />
-            <input id="add-phone" type="text" placeholder="Số điện thoại" required />
-            <input id="add-address" type="text" placeholder="Địa chỉ" required />
-            <button type="submit">Hãy Thêm</button>
-        </form>
-    </div>
-    
-    <div id="user-list"></div>
-
-    <div id="edit-modal" class="modal hidden">
-        <div>
-            <h2>Chỉnh sửa Người Dùng</h2>
+    <div id="user-list">
+        <!-- Danh sách người dùng sẽ được hiển thị ở đây -->
+    </div>    
+    <!-- Modal Edit -->
+    <div id="edit-modal">
+        <div class="modal-content">
+            <h2>Chỉnh Sửa Người Dùng</h2>
             <form id="edit-form">
-                <div>
+                <div class="form-group">
                     <label for="edit-name">Tên</label>
-                    <input id="edit-name" type="text" required />
+                    <input id="edit-name" type="text" required /> 
                 </div>
-                <div>
+                <div class="form-group">
                     <label for="edit-email">Email</label>
                     <input id="edit-email" type="email" required />
                 </div>
-                <div>
+                <div class="form-group">
                     <label for="edit-phone">Số Điện Thoại</label>
                     <input id="edit-phone" type="text" required />
                 </div>
-                <div>
+                <div class="form-group">
                     <label for="edit-address">Địa Chỉ</label>
                     <input id="edit-address" type="text" required />
                 </div>
-                <div>
+                <div class="form-actions">
                     <button type="button" id="cancel-edit">Hủy</button>
                     <button type="submit">Lưu</button>
                 </div>
             </form>
         </div>
     </div>
+    <!-- Modal thêm mới -->
+    <div id="add-modal">
+        <div class="modal-content">
+            <h2>Thêm Người Dùng</h2>
+            <form id="add-form">
+                <div class="form-group">
+                    <label for="add-name">Tên</label>
+                    <input id="add-name" type="text" required />
+                </div>
+                <div class="form-group">
+                    <label for="add-email">Email</label>
+                    <input id="add-email" type="email" required />
+                </div>
+                <div class="form-group">
+                    <label for="add-phone">Số Điện Thoại</label>
+                    <input id="add-phone" type="text" required />
+                </div>
+                <div class="form-group">
+                    <label for="add-address">Địa Chỉ</label>
+                    <input id="add-address" type="text" required />
+                </div>
+                <div class="form-actions">
+                    <button type="button" id="cancel-add">Hủy</button>
+                    <button type="submit">Thêm</button>
+                </div>
+            </form>
+        </div>
+    </div>
 
-    <script type="module" src="main.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
